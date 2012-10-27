@@ -28,7 +28,13 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('*', function toTheRealThing (req, res, next) {
-  res.redirect('http://nodetoolbox.com'+ req.originalUrl, 301);
+  if (req.originalUrl == '/stylesheets/style.css' ||
+      req.originalUrl == '/images/toolbox_icon.png') {
+    console.log('url: ', req.originalUrl);
+    next();
+  } else {
+    res.redirect('http://nodetoolbox.com'+ req.originalUrl, 301);
+  }
 });
 
 http.createServer(app).listen(app.get('port'), function(){

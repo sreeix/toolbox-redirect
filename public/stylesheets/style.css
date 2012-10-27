@@ -1,8 +1,29 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+  background-color: black;
 }
 
 a {
   color: #00B7FF;
+}
+
+.header {
+  padding: 20px;
+}
+
+.logo {
+  margin: 0 auto;
+  background: url('/images/toolbox_icon.png') no-repeat;
+  padding: 5px 80px 12px 40px;
+  color: white;
+  text-decoration: none;
+  font-size: 27px;
+}
+
+.announcement {
+  padding: 30px;
+  color: #535353;
+  background-color: #fdfdfd;
 }
